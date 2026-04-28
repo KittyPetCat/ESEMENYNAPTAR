@@ -1,15 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Esemény naptár</title>
     <link rel="stylesheet" href="esemeny_tomb.css">
-    <script src="esemeny_tomb.js"></script>
 </head>
 <body>
-    <h1>Ez egy esemény tömb</h1>
-    <ul id="esemeny-lista"></ul>
-    <button class="skip-btn" type="button" onclick="vissza()">skip</button>
+
+<div class="header">
+    <span class="admin">admin</span>
+    <span class="nav">naptar/<b>tomb</b></span>
+    <select id="person-select"></select>
+</div>
+
+<div class="calendar-container">
+    <table class="calendar">
+        <thead>
+            <tr>
+                <th>óra</th>
+                <th>HÉTFŐ</th>
+                <th>KEDD</th>
+                <th>SZERDA</th>
+                <th>CSÜTÖRTÖK</th>
+                <th>PÉNTEK</th>
+                <th>SZOMBAT</th>
+                <th>VASÁRNAP</th>
+            </tr>
+        </thead>
+        <tbody id="calendar-body"></tbody>
+    </table>
+
+    <div class="sidebar">
+        <div class="sidebar-title">Beállítások</div>
+        <div class="ertesitesek">értesítések</div>
+        <div class="beallitasok">beállítások</div>
+    </div>
+</div>
+
+<form id="event-form">
+    <label>Nap:
+        <select id="day-select">
+            <option value="0">Hétfő</option>
+            <option value="1">Kedd</option>
+            <option value="2">Szerda</option>
+            <option value="3">Csütörtök</option>
+            <option value="4">Péntek</option>
+            <option value="5">Szombat</option>
+            <option value="6">Vasárnap</option>
+        </select>
+    </label>
+
+    <label>Kezdés:
+        <select id="start-hour"></select>
+    </label>
+
+    <label>Vége:
+        <select id="end-hour"></select>
+    </label>
+
+    <label>Esemény:
+        <input type="text" id="event-desc" required>
+    </label>
+
+    <button type="submit">Hozzáadás</button>
+</form>
+
+<button class="skip-btn" onclick="vissza()">vissza</button>
+
+<script src="esemeny_tomb.js"></script>
 </body>
 </html>
