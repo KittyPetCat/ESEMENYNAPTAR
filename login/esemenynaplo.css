@@ -1,0 +1,57 @@
+.login-quote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    white-space: pre-line;}
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+        .login-container {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .login-title {
+            font-size: 2.2em;
+            font-style: italic;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            width: 340px;
+        }
+        .login-input {
+            background: #ccc;
+            border: 4px solid #000;
+            font-size: 1.2em;
+            padding: 8px 10px;
+            outline: none;
+            font-family: inherit;
+        }
+        .login-btn {
+            background: #f6e7b2;
+            border: 4px solid #000;
+            font-size: 1.4em;
+            padding: 6px 0;
+            margin: 18px auto 0 auto;
+            width: 220px;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .login-btn:active {
+            background: #e5d49a;
+        }
+        .login-quote {
+            margin-top: 30px;
+            font-style: italic;
+            color: #888;
+            font-size: 1.3em;
+        }

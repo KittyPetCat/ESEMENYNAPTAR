@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "szerzo": "Petőfi Sándor",
+    "szoveg": "Itt van az ősz, itt van újra,\nS szép, mint mindig, énnekem."
+  },
+  {
+    "id": 2,
+    "szerzo": "Arany János",
+    "szoveg": "Letészem a lantot. Nyugodjék.\nTőlem ne várjon senki dalt."
+  },
+  {
+    "id": 3,
+    "szerzo": "Ady Endre",
+    "szoveg": "Góg és Magóg fia vagyok én,\nHiába döngetek kaput, falat."
+  },
+  {
+    "id": 4,
+    "szerzo": "József Attila",
+    "szoveg": "Íme, hát megleltem hazámat,\nA földet, ahol nevemet hibátlanul írják fölém."
+  },
+  {
+    "id": 5,
+    "szerzo": "Radnóti Miklós",
+    "szoveg": "Nem tudhatom, hogy másnak e tájék mit jelent,\nNekem szülőhazám itt e lángoktól ölelt kis ország."
+  },
+  {
+    "id": 6,
+    "szerzo": "Vörösmarty Mihály",
+    "szoveg": "Hazádnak rendületlenül\nLégy híve, ó magyar."
+  },
+  {
+    "id": 7,
+    "szerzo": "Kosztolányi Dezső",
+    "szoveg": "Boldog, szomorú dal ez,\nMely száll, mint egy halk sóhaj."
+  },
+  {
+    "id": 8,
+    "szerzo": "Babits Mihály",
+    "szoveg": "Mint különös hírmondó,\nÜzen az ősz a nyárnak."
+  },
+  {
+    "id": 9,
+    "szerzo": "Petőfi Sándor",
+    "szoveg": "Szabadság, szerelem!\nE kettő kell nekem."
+  },
+  {
+    "id": 10,
+    "szerzo": "Arany János",
+    "szoveg": "Áll a hajó, s benne ül a révész,\nCsendesen vár, míg jő az éj."
+  }
+]

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log ing</title>
+    <link rel="stylesheet" href="esemenynaplo.css">
+    <script src="esemenynaplo.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-title">Log ing</div>
+        <form class="login-form">
+            <input class="login-input" type="text" placeholder="nev" required>
+            <input class="login-input" type="email" placeholder="email" required>
+            <input class="login-input" type="text" placeholder="telefonszam" required>
+            <input class="login-input" type="password" placeholder="jelszo" required>
+            <button class="login-btn" type="submit">log in</button>
+            <button class="skip-btn" type="button" onclick="belep()">skip</button>
+        </form>
+        <div class="login-quote">,,"</div>
+    </div>
+    <script>
+        fetch('versek.json')
+        .then(response => response.json())
+        .then(data => {
+            const randomIndex = Math.floor(Math.random() * data.length);
+            const vers = data[randomIndex];
+            document.querySelector('.login-quote').innerText = ",, " + vers.szoveg + " ,," + "\n" + " - " + vers.szerzo;
+        })
+        .catch(error => {
+            console.error("Hiba a JSON betöltésnél:", error);
+        });
+    </script>
+</body>
+</html>
