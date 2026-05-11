@@ -98,7 +98,7 @@ function addEvent(e) {
 }
 
 function vissza() {
-    window.location.href = "login/esemenynaplo.html";
+    window.location.href = "../login/esemenynaplo.html";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
