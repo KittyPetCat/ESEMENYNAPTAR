@@ -2,6 +2,11 @@ body {
     font-family: Arial;
     margin: 0;
     background: #f4f4f4;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100vw;
+    min-width: 100vw;
+    box-sizing: border-box;
 }
 
 .header {
@@ -17,19 +22,38 @@ body {
 
 .calendar-container {
     display: flex;
-    margin: 20px;
+    height: calc(100vh - 120px);
+    margin: 0;
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
 }
 
+/* Make calendar scrollable and larger */
 .calendar {
     border-collapse: collapse;
     background: white;
+    width: 100%;
+    height: 100%;
+    min-width: 750px;
+    min-height: 100%;
 }
 
 .calendar th, .calendar td {
     border: 1px solid #333;
     width: 90px;
     height: 38px;
+    min-width: 90px;
+    min-height: 38px;
+}
+
+.calendar td {
     position: relative;
+    overflow: visible;
+}
+
+.calendar th {
+    background: #eee;
+    position: static;
 }
 
 .calendar th {
@@ -44,6 +68,8 @@ body {
     border-radius: 6px;
     padding: 4px;
     font-size: 0.9em;
+    box-sizing: border-box;
+    z-index: 1;
 }
 
 .event.pink { background: #f8b6cc; }
@@ -55,7 +81,9 @@ body {
     margin-left: 20px;
     padding: 10px;
     background: #ccc;
-    min-width: 200px;
+    min-width: 100px;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 #event-form {

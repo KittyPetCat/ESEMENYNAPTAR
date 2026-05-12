@@ -18,7 +18,7 @@ function renderHourSelect() {
     const startSel = document.getElementById("start-hour");
     const endSel = document.getElementById("end-hour");
 
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 23; i++) {
         let o1 = new Option(i, i);
         let o2 = new Option(i, i);
         startSel.add(o1);
@@ -32,7 +32,7 @@ function renderCalendar() {
 
     const selected = document.getElementById("person-select").value;
 
-    for (let ora = 1; ora <= 10; ora++) {
+    for (let ora = 1; ora <= 23; ora++) {
         const tr = document.createElement("tr");
 
         const th = document.createElement("th");
@@ -40,14 +40,9 @@ function renderCalendar() {
         tr.appendChild(th);
 
         for (let nap = 0; nap < 7; nap++) {
-
-            const ongoing = esemenyek[selected].find(ev =>
-                ev.nap === nap && ora > ev.start && ora < ev.end
-            );
-            if (ongoing) continue;
-
             const td = document.createElement("td");
 
+            // Only show the event if it starts at this hour
             const es = esemenyek[selected].find(ev =>
                 ev.nap === nap && ev.start === ora
             );
@@ -56,9 +51,7 @@ function renderCalendar() {
                 const div = document.createElement("div");
                 div.className = "event " + es.szin;
                 div.textContent = es.desc;
-
                 div.style.height = (es.end - es.start) * 38 + "px";
-
                 td.appendChild(div);
             }
 
@@ -85,10 +78,14 @@ function addEvent(e) {
 
     const szin = szinek[nap % szinek.length];
 
-    if (esemenyek[selected].some(ev =>
+    const conflict = esemenyek[selected].find(ev =>
         ev.nap === nap && !(end <= ev.start || start >= ev.end)
-    )) {
-        alert("Ütközés!");
+    );
+    if (conflict) {
+        alert(
+            `Ütközés!\nMár van esemény: ${conflict.desc}\n` +
+            `Idő: ${conflict.start} - ${conflict.end}`
+        );
         return;
     }
 

@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 });
 function belep() {
-	window.location.href = "tomb_szerint/esemeny_tomb.html";
+	window.location.href = "/tomb_szerint/esemeny_tomb.html";
 };
 window.belep = belep;
 
