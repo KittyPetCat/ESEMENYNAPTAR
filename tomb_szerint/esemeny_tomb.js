@@ -51,7 +51,7 @@ function renderCalendar() {
                 const div = document.createElement("div");
                 div.className = "event " + es.szin;
                 div.textContent = es.desc;
-                div.style.height = (es.end - es.start) * 38 + "px";
+                div.style.height = (es.end - es.start + 1) * 38 + "px";
                 td.appendChild(div);
             }
 

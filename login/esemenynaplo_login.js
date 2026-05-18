@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', function() {
 			jelszo
 		};
 
-		// Create JSON and trigger download
 		const jsonStr = JSON.stringify(data, null, 2);
 		const blob = new Blob([jsonStr], { type: 'application/json' });
 		const a = document.createElement('a');
